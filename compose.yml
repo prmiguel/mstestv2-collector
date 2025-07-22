@@ -1,0 +1,14 @@
+---
+
+services:
+  splunk:
+    image: splunk/splunk
+    container_name: splunkservice
+    environment:
+      - SPLUNK_START_ARGS=--accept-license
+      - SPLUNK_HEC_TOKEN=abcd1234
+      - SPLUNK_PASSWORD=password
+    ports:
+      - 8000:8000
+      - 8088:8088
+      - 8089:8089
